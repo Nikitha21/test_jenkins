@@ -12,6 +12,7 @@ pipeline {
     post {
         always {
             sh 'ls'
+            archiveArtifacts artifacts: 'test_archive/test_logs/*.log'
         }
     }
 }
